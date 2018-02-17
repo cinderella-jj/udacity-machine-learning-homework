@@ -60,7 +60,8 @@ for call in calls:
 codes_list = sorted(answer_number_codes_cnts.keys())
 
 #第一部分: 找出被班加罗尔地区的固定电话所拨打的所有电话的区号和移动前缀（代号）。
-print("The numbers called by people in Bangalore have codes:\n{}".format('\n'.join(codes_list)))
+msg = "The numbers called by people in Bangalore have codes:" + len(codes_list)*"\n<{}>"
+print(msg.format(*codes_list))
 
 
 #第二部分: 由班加罗尔固话打往班加罗尔的电话所占比例是多少？
