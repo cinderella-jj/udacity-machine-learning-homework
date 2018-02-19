@@ -11,7 +11,6 @@ with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
 
-print(calls[0])
 """
 任务2: 哪个电话号码的通话总时间最长? 不要忘记，用于接听电话的时间也是通话时间的一部分。
 输出信息:
@@ -27,8 +26,10 @@ September 2016.".
 total_answers_during = {}
 
 for call in calls:
+    sending_tel = call[1]
     answer_tel = call[1]
     total_answers_during[answer_tel] = total_answers_during.get(answer_tel, 0) + int(call[-1])
+    total_answers_during[sending_tel] = total_answers_during.get(sending_tel, 0) + int(call[-1])
 
 longest_time = 0
 
