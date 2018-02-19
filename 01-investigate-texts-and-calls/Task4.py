@@ -38,6 +38,8 @@ for call_phone_number in call_phone_numbers:
         and call_phone_number not in receive_phone_numbers\
         and call_phone_number not in telemarketers_numbers:
         telemarketers_numbers.append(call_phone_number)
-msg = "These numbers could be telemarketers: " + len(telemarketers_numbers) * "\n<{}>"
 
+telemarketers_numbers.sort()
+
+msg = "These numbers could be telemarketers: " + len(telemarketers_numbers) * "\n<{}>"
 print(msg.format(*telemarketers_numbers))
