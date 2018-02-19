@@ -67,6 +67,6 @@ print(msg.format(*codes_list))
 
 #第二部分: 由班加罗尔固话打往班加罗尔的电话所占比例是多少？
 total_cnts = sum(answer_number_codes_cnts.values())
-b2b_percent = round(answer_number_codes_cnts[Bangalore_area_code] / total_cnts, 2)
+b2b_percent = round(answer_number_codes_cnts[Bangalore_area_code] * 100 / total_cnts, 2)
 print("<{}> percent of calls from fixed lines in Bangalore are calls"
         "to other fixed lines in Bangalore.".format(b2b_percent))
