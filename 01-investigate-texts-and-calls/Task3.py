@@ -49,12 +49,13 @@ for call in calls:
         continue
 
     if answer_number[0] == '(':
-        code = answer_number[1:4]
+        code = answer_number[1:answer_number.index(')')]
     elif answer_number.find(' '):
-        code = answer_number[:4]
+        code = answer_number.split(' ')[1]
     else:
         #若有140的情况也直接忽略了
         continue
+
     answer_number_codes_cnts[code] = answer_number_codes_cnts.get(code, 0) + 1
 
 codes_list = sorted(answer_number_codes_cnts.keys())
