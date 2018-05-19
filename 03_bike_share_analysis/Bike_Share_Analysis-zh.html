@@ -11821,7 +11821,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 导入所有必要的包和函数。</span>
@@ -11838,7 +11838,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_first_point</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
@@ -11857,7 +11857,7 @@ div#notebook {
         <span class="c1">## 待办：对 DictReader 对象使用函数     ##</span>
         <span class="c1">## 从而读取数据文件的第一条骑行记录并将其存储为一个变量     ##</span>
         <span class="c1">## 见 https://docs.python.org/3/library/csv.html#reader-objects ##</span>
-        <span class="n">first_trip</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">trip_reader</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">first_trip</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">trip_reader</span><span class="p">)</span>
         
         <span class="c1">## 待办：用 pprint 库来输出第一条骑行记录。 ##</span>
         <span class="c1">## 见 https://docs.python.org/3/library/pprint.html     ##</span>
@@ -11894,46 +11894,46 @@ div#notebook {
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 City: NYC
-{&#39;bikeid&#39;: &#39;17109&#39;,
- &#39;birth year&#39;: &#39;&#39;,
- &#39;end station id&#39;: &#39;401&#39;,
- &#39;end station latitude&#39;: &#39;40.72019576&#39;,
- &#39;end station longitude&#39;: &#39;-73.98997825&#39;,
- &#39;end station name&#39;: &#39;Allen St &amp; Rivington St&#39;,
- &#39;gender&#39;: &#39;0&#39;,
- &#39;start station id&#39;: &#39;532&#39;,
- &#39;start station latitude&#39;: &#39;40.710451&#39;,
- &#39;start station longitude&#39;: &#39;-73.960876&#39;,
- &#39;start station name&#39;: &#39;S 5 Pl &amp; S 4 St&#39;,
- &#39;starttime&#39;: &#39;1/1/2016 00:09:55&#39;,
- &#39;stoptime&#39;: &#39;1/1/2016 00:23:54&#39;,
- &#39;tripduration&#39;: &#39;839&#39;,
- &#39;usertype&#39;: &#39;Customer&#39;}
+OrderedDict([(&#39;tripduration&#39;, &#39;839&#39;),
+             (&#39;starttime&#39;, &#39;1/1/2016 00:09:55&#39;),
+             (&#39;stoptime&#39;, &#39;1/1/2016 00:23:54&#39;),
+             (&#39;start station id&#39;, &#39;532&#39;),
+             (&#39;start station name&#39;, &#39;S 5 Pl &amp; S 4 St&#39;),
+             (&#39;start station latitude&#39;, &#39;40.710451&#39;),
+             (&#39;start station longitude&#39;, &#39;-73.960876&#39;),
+             (&#39;end station id&#39;, &#39;401&#39;),
+             (&#39;end station name&#39;, &#39;Allen St &amp; Rivington St&#39;),
+             (&#39;end station latitude&#39;, &#39;40.72019576&#39;),
+             (&#39;end station longitude&#39;, &#39;-73.98997825&#39;),
+             (&#39;bikeid&#39;, &#39;17109&#39;),
+             (&#39;usertype&#39;, &#39;Customer&#39;),
+             (&#39;birth year&#39;, &#39;&#39;),
+             (&#39;gender&#39;, &#39;0&#39;)])
 
 City: Chicago
-{&#39;bikeid&#39;: &#39;2295&#39;,
- &#39;birthyear&#39;: &#39;1990&#39;,
- &#39;from_station_id&#39;: &#39;156&#39;,
- &#39;from_station_name&#39;: &#39;Clark St &amp; Wellington Ave&#39;,
- &#39;gender&#39;: &#39;Male&#39;,
- &#39;starttime&#39;: &#39;3/31/2016 23:30&#39;,
- &#39;stoptime&#39;: &#39;3/31/2016 23:46&#39;,
- &#39;to_station_id&#39;: &#39;166&#39;,
- &#39;to_station_name&#39;: &#39;Ashland Ave &amp; Wrightwood Ave&#39;,
- &#39;trip_id&#39;: &#39;9080545&#39;,
- &#39;tripduration&#39;: &#39;926&#39;,
- &#39;usertype&#39;: &#39;Subscriber&#39;}
+OrderedDict([(&#39;trip_id&#39;, &#39;9080545&#39;),
+             (&#39;starttime&#39;, &#39;3/31/2016 23:30&#39;),
+             (&#39;stoptime&#39;, &#39;3/31/2016 23:46&#39;),
+             (&#39;bikeid&#39;, &#39;2295&#39;),
+             (&#39;tripduration&#39;, &#39;926&#39;),
+             (&#39;from_station_id&#39;, &#39;156&#39;),
+             (&#39;from_station_name&#39;, &#39;Clark St &amp; Wellington Ave&#39;),
+             (&#39;to_station_id&#39;, &#39;166&#39;),
+             (&#39;to_station_name&#39;, &#39;Ashland Ave &amp; Wrightwood Ave&#39;),
+             (&#39;usertype&#39;, &#39;Subscriber&#39;),
+             (&#39;gender&#39;, &#39;Male&#39;),
+             (&#39;birthyear&#39;, &#39;1990&#39;)])
 
 City: Washington
-{&#39;Bike number&#39;: &#39;W20842&#39;,
- &#39;Duration (ms)&#39;: &#39;427387&#39;,
- &#39;End date&#39;: &#39;3/31/2016 23:04&#39;,
- &#39;End station&#39;: &#39;Georgia Ave and Fairmont St NW&#39;,
- &#39;End station number&#39;: &#39;31207&#39;,
- &#39;Member Type&#39;: &#39;Registered&#39;,
- &#39;Start date&#39;: &#39;3/31/2016 22:57&#39;,
- &#39;Start station&#39;: &#39;Park Rd &amp; Holmead Pl NW&#39;,
- &#39;Start station number&#39;: &#39;31602&#39;}
+OrderedDict([(&#39;Duration (ms)&#39;, &#39;427387&#39;),
+             (&#39;Start date&#39;, &#39;3/31/2016 22:57&#39;),
+             (&#39;End date&#39;, &#39;3/31/2016 23:04&#39;),
+             (&#39;Start station number&#39;, &#39;31602&#39;),
+             (&#39;Start station&#39;, &#39;Park Rd &amp; Holmead Pl NW&#39;),
+             (&#39;End station number&#39;, &#39;31207&#39;),
+             (&#39;End station&#39;, &#39;Georgia Ave and Fairmont St NW&#39;),
+             (&#39;Bike number&#39;, &#39;W20842&#39;),
+             (&#39;Member Type&#39;, &#39;Registered&#39;)])
 </pre>
 </div>
 </div>
@@ -11963,7 +11963,7 @@ City: Washington
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">time_of_trip</span><span class="p">(</span><span class="n">datum</span><span class="p">,</span> <span class="n">city</span><span class="p">):</span>
@@ -12008,7 +12008,7 @@ City: Washington
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">duration_in_mins</span><span class="p">(</span><span class="n">datum</span><span class="p">,</span> <span class="n">city</span><span class="p">):</span>
@@ -12051,7 +12051,7 @@ City: Washington
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">type_of_user</span><span class="p">(</span><span class="n">datum</span><span class="p">,</span> <span class="n">city</span><span class="p">):</span>
@@ -12100,7 +12100,7 @@ City: Washington
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">condense_data</span><span class="p">(</span><span class="n">in_file</span><span class="p">,</span> <span class="n">out_file</span><span class="p">,</span> <span class="n">city</span><span class="p">):</span>
@@ -12148,7 +12148,7 @@ City: Washington
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 运行下框以测试效果</span>
@@ -12180,25 +12180,25 @@ City: Washington
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 City: Washington
-{&#39;day_of_week&#39;: &#39;Thursday&#39;,
- &#39;duration&#39;: &#39;7.123116666666666&#39;,
- &#39;hour&#39;: &#39;22&#39;,
- &#39;month&#39;: &#39;3&#39;,
- &#39;user_type&#39;: &#39;Subscriber&#39;}
+OrderedDict([(&#39;duration&#39;, &#39;7.123116666666666&#39;),
+             (&#39;month&#39;, &#39;3&#39;),
+             (&#39;hour&#39;, &#39;22&#39;),
+             (&#39;day_of_week&#39;, &#39;Thursday&#39;),
+             (&#39;user_type&#39;, &#39;Subscriber&#39;)])
 
 City: Chicago
-{&#39;day_of_week&#39;: &#39;Thursday&#39;,
- &#39;duration&#39;: &#39;15.433333333333334&#39;,
- &#39;hour&#39;: &#39;23&#39;,
- &#39;month&#39;: &#39;3&#39;,
- &#39;user_type&#39;: &#39;Subscriber&#39;}
+OrderedDict([(&#39;duration&#39;, &#39;15.433333333333334&#39;),
+             (&#39;month&#39;, &#39;3&#39;),
+             (&#39;hour&#39;, &#39;23&#39;),
+             (&#39;day_of_week&#39;, &#39;Thursday&#39;),
+             (&#39;user_type&#39;, &#39;Subscriber&#39;)])
 
 City: NYC
-{&#39;day_of_week&#39;: &#39;Friday&#39;,
- &#39;duration&#39;: &#39;13.983333333333333&#39;,
- &#39;hour&#39;: &#39;0&#39;,
- &#39;month&#39;: &#39;1&#39;,
- &#39;user_type&#39;: &#39;Customer&#39;}
+OrderedDict([(&#39;duration&#39;, &#39;13.983333333333333&#39;),
+             (&#39;month&#39;, &#39;1&#39;),
+             (&#39;hour&#39;, &#39;0&#39;),
+             (&#39;day_of_week&#39;, &#39;Friday&#39;),
+             (&#39;user_type&#39;, &#39;Customer&#39;)])
 </pre>
 </div>
 </div>
@@ -12225,7 +12225,7 @@ City: NYC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">number_of_trips</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
@@ -12262,7 +12262,7 @@ City: NYC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 修改此框及上框，回答问题 4a。##</span>
@@ -12316,7 +12316,7 @@ Chicago 平均时长: 16.563629368787335 支付比例: 8.33% <br></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 使用本框及新框来回答问题 4b。               ##</span>
@@ -12364,7 +12364,7 @@ Chicago 平均时长: 16.563629368787335 支付比例: 8.33% <br></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 使用本框及新框来回答问题 4c。##</span>
@@ -12399,7 +12399,7 @@ Chicago 平均时长: 16.563629368787335 支付比例: 8.33% <br></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">city</span><span class="p">,</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">city_info</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -12861,7 +12861,7 @@ NYC avg_duration:15.81 paied:7.30% subscriber_avg_duration:13.68 cousomer_avg_du
 <p><a id='conclusions'></a></p>
 <h2 id="&#32467;&#35770;">&#32467;&#35770;<a class="anchor-link" href="#&#32467;&#35770;">&#182;</a></h2><p>恭喜你完成了本项目！这只是数据分析流程的一个样本，囊括了提出问题、整理数据、探索数据三大步骤。通常来讲，数据分析流程进行到这一步，你就可以进行统计检验或为数据拟合模型、得出预测，从而得出结论了。虽然还有许多潜在分析可以进行，但仅靠我们提供的这些数据是不可能完成的。例如，我们没有研究具体的地点数据。最常用的停车点在哪里？最常用的路线是什么？再如，天气也可能对每日骑客量造成很大的影响。下雨或下雪的时候，骑客量会受多大的影响？会员或散客谁更易受天气的影响？</p>
 <p><strong>问题 7</strong>：撇开共享单车数据不谈，想出一个你想应用数据科学技术的课题或领域。对于该课题，你想了解些什么？</p>
-<p><strong>答案</strong>：新妈妈每天挤奶、哺乳时间与母乳量之间的关系。</p>
+<p><strong>答案</strong>：新妈妈每天挤奶、哺乳时间与产乳量之间的关系。</p>
 <blockquote><p><strong>小贴士</strong>：如果我们想同他人分享分析成果，我们也不一定要给他们一份 jupyter Notebook  (.ipynb) 文件的副本，我们可以将 Notebook 的输出结果以某种格式输出，这样一来，就算是没有安装 Python 的人也可以打开文件。在左上方的 <strong>文件</strong> 菜单中找到  <strong>下载为</strong>  子菜单，你可以在其中选择各种更加普遍的格式，比如 HTML (.html) 或 PDF (.pdf)。你可能还需要额外的包或软件来实现这类输出。</p>
 <p>如果你是通过教室的 Project Notebook 页面来进行本项目的，你也可以直接从工作空间提交本项目。 <strong>但在此之前</strong>，你得执行下方的代码框，为完成好的项目保存一份 HTML 的副本，并将其放到工作空间中。如果操作顺利，输出代码应为 0， 如果你点击左上角的 jupyter 图标，你就会看到工作空间的目录中出现了你的 .html 文件；或者你也可以根据上述段落提及的步骤来下载报告的 .html 格式副本，然后  <em>上传</em> 该报告到目录之中（点击 jupyter 图标来实现这一步）。</p>
 <p>无论是哪个办法，一旦你在工作空间中获取了 .html 格式的报告，你就可以点击工作空间右下方的“项目提交”按钮来完成提交。</p>
@@ -12872,7 +12872,7 @@ NYC avg_duration:15.81 paied:7.30% subscriber_avg_duration:13.68 cousomer_avg_du
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">subprocess</span> <span class="k">import</span> <span class="n">call</span>
@@ -12880,6 +12880,26 @@ NYC avg_duration:15.81 paied:7.30% subscriber_avg_duration:13.68 cousomer_avg_du
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[29]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
