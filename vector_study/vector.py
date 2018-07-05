@@ -1,4 +1,4 @@
-from math import sqrt
+from math import sqrt, acos, pi
 
 class Vector(object):
     def __init__(self, coordinates):
@@ -50,6 +50,13 @@ class Vector(object):
     def product(self, v):
         return sum([x[0] * x[1] for x in zip(self.coordinates, v.coordinates)])
 
+    def angle(self, v, degrees=False):
+        #radians = acos(self.product(v) / (self.magnitude * v.magnitude))
+        radians = acos(self.normalization.product(v.normalization))
+        if degrees:
+            return radians * 180 / pi
+        return radians
+
 def cal_n_m():
     v1 = Vector((-0.211, 7.437))
     print(v1.magnitude)
@@ -59,13 +66,21 @@ def cal_n_m():
 
 def cal_pro_agl():
     v1=Vector((7.887, 4.138))
-    v2=Vector((-8.802, 6.776))
+    w1=Vector((-8.802, 6.776))
 
-    print(v1.product(v2))
-    v3=Vector((-5.955, -4.904, -1.874))
-    v4=Vector((-4.496, -8.755, 7.103))
-    print(v3.product(v4))
+    print(v1.product(w1))
+    v2=Vector((-5.955, -4.904, -1.874))
+    w2=Vector((-4.496, -8.755, 7.103))
+    print(v2.product(w2))
 
+    v3=Vector((3.183, -7.627))
+    w3=Vector((-2.668, 5.319))
+    print(v3.angle(w3))
+
+    v4=Vector((7.35, 0.221, 5.188))
+    w4=Vector((2.751, 8.259, 3.985))
+    print(v4.angle(w4, True))
 
 if __name__== "__main__":
-    cal_n_m()
+    #cal_n_m()
+    cal_pro_agl()
