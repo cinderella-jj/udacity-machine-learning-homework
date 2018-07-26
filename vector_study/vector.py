@@ -1,7 +1,7 @@
 from math import sqrt, acos, pi
 from decimal import Decimal, getcontext
 
-getcontext().prec = 3
+getcontext().prec = 6
 
 class Vector(object):
     def __init__(self, coordinates):
@@ -79,6 +79,18 @@ class Vector(object):
     def projection_orthogonal(self, b):
         return self - self.projection(b)
 
+    def cross_product(self, v):
+        return Vector((
+            self.coordinates[1]*v.coordinates[2]-v.coordinates[1]*self.coordinates[2],
+            self.coordinates[2]*v.coordinates[0]-v.coordinates[2]*self.coordinates[0],
+            self.coordinates[0]*v.coordinates[1]-v.coordinates[0]*self.coordinates[1]))
+
+    def parallelogram_area(self, v):
+        return self.cross_product(v).magnitude
+
+    def triangle_area(self, v):
+        return self.parallelogram_area(v)/Decimal(2)
+
 def cal_n_m():
     v1 = Vector((-0.211, 7.437))
     print(v1.magnitude)
@@ -122,9 +134,21 @@ def paral_orthogonal():
     print(v3.orthogonal_with(w3))
     print(v3.dot(w3))
 
-def projection():
+def product_cross():
+    v1 = Vector((8.462, 7.893, -8.187))
+    w1 = Vector((6.984, -5.975, 4.778))
+    z1 = v1.cross_product(w1)
+    print(z1)
+    v2 = Vector((-8.987, -9.838, 5.031))
+    w2 = Vector((-4.268, -1.861, -8.866))
+    print(v2.parallelogram_area(w2))
+    v3 = Vector((1.5, 9.547, 3.691))
+    w3 = Vector((-6.007, 0.124, 5.772))
+    print(v3.triangle_area(w3))
+
 
 if __name__== "__main__":
     #cal_n_m()
     #cal_pro_agl()
-    paral_orthogonal()
+    #paral_orthogonal()
+    product_cross()
